@@ -1,15 +1,3 @@
-// 愚人节快乐
-blog.addLoadEvent(function() {
-  var calendar = new Date()
-  var month = calendar.getMonth()
-  var date = calendar.getDate()
-  if (month == 3 && date == 1 && localStorage && !localStorage.cancelFool) {
-    console.log('愚人节快乐╰(￣▽￣)╭')
-    var style = '-webkit-transform: rotate(-180deg);transform: rotate(-180deg);'
-    document.body.style = style
-  }
-})
-
 // 新建DIV包裹TABLE
 blog.addLoadEvent(function() {
   // 文章页生效
@@ -60,64 +48,5 @@ blog.addLoadEvent(function() {
     } else if (document.body) {
       document.body.scrollTop = 0
     }
-  })
-})
-
-// 文字冒泡-社会主义核心价值观
-blog.addLoadEvent(function() {
-  if (document.body.offsetWidth <= 560) {
-    return false
-  }
-  var texts = [
-    '富强',
-    '民主',
-    '文明',
-    '和谐',
-    '自由',
-    '平等',
-    '公正',
-    '法治',
-    '爱国',
-    '敬业',
-    '诚信',
-    '友善'
-  ]
-  var temp = '<span style="top:{top}px;'
-  temp += 'left:{left}px;'
-  temp += 'font-size: 12px;'
-  temp += 'width: 30px;'
-  temp += 'z-index: 999;'
-  temp += 'position: absolute;'
-  temp += 'opacity: 1;'
-  temp += 'transition: all 500ms ease-out;'
-  temp += '-webkit-transition: all 500ms ease-out;"'
-  temp += 'class="select-none"'
-  temp += '>{text}</span>'
-
-  blog.addEvent(window, 'click', function(ev) {
-    var tagName = ev.target.tagName.toLocaleLowerCase()
-    if (tagName == 'a') {
-      return
-    }
-    var text = texts[parseInt(Math.random() * texts.length)]
-    var html = temp.replace('{text}', text)
-    html = html.replace('{top}', ev.pageY - 10)
-    html = html.replace('{left}', ev.pageX - 10)
-
-    var o = document.createElement('div')
-    o.innerHTML = html
-    var node = o.children[0]
-
-    document.body.appendChild(node)
-    o = null
-    setTimeout(function() {
-      node.style.top = ev.pageY - 50 + 'px'
-      node.style.opacity = 0
-    }, 20)
-
-    setTimeout(function() {
-      document.body.removeChild(node)
-      node = null
-    }, 500)
   })
 })
