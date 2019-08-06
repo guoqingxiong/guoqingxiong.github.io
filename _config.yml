@@ -19,8 +19,6 @@ menu:
     url: /pages/categories.html
   - title: Search
     url: /pages/search.html
-  - title: Links
-    url: /pages/links.html
   - title: About
     url: /pages/about.html
 

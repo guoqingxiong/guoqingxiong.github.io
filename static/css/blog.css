@@ -216,51 +216,7 @@ body::-webkit-scrollbar {
 .header .menu-togger {
   display: none;
 }
-.footer {
-  margin-top: 20px;
-  margin-bottom: 4px;
-  font-size: 0;
-}
-.footer > * {
-  font-size: 14px;
-  margin: 0 4px;
-  position: relative;
-}
-.footer > *:first-child {
-  margin-left: 0;
-}
-.footer > *:last-child {
-  margin-right: 0;
-}
-.footer a:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background-color: #313131;
-}
-.footer #moveUp {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  background: #e8e6e6;
-  transition: bottom 500ms ease-in-out 0ms;
-  -webkit-transition: bottom 500ms ease-in-out 0ms;
-}
-.footer #moveUp::after {
-  position: absolute;
-  top: 8px;
-  left: 7px;
-  content: '';
-  border-right: 8px solid #e8e6e6;
-  border-bottom: 13px solid #949393;
-  border-left: 8px solid #e8e6e6;
-}
+
 .page-title {
   font-size: 20px;
   margin: 16px 0 18px 0;
@@ -613,9 +569,6 @@ body::-webkit-scrollbar {
     top: 65px;
     pointer-events: auto;
     opacity: 1;
-  }
-  .footer > * {
-    font-size: 12px;
   }
   .page-title {
     font-size: 18px;
