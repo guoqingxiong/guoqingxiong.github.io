@@ -1,0 +1,32 @@
+encoding: utf-8
+
+# SEO相关信息
+title: 沉思录
+description: Guoqing Xiong的个人博客
+keywords: Blog,Java,Html,JavaScript
+author: xguoqing
+footerText: ''
+
+# 域名配置
+# baseUrl配置,如果网站部署在根目录下的目录中，请设置为 /目录名
+baseUrl: ''
+
+# 菜单
+menu:
+  - title: Home
+    url: /
+  - title: Categories
+    url: /pages/categories.html
+  - title: Search
+    url: /pages/search.html
+  - title: Links
+    url: /pages/links.html
+  - title: About
+    url: /pages/about.html
+
+# 这些不要动
+permalink: /posts/:year/:month/:day/:title.html
+kramdown:
+  auto_ids: true
+  input: GFM
+exclude: ['README.md', 'build-tool']
